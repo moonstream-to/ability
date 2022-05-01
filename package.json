@@ -1,0 +1,32 @@
+{
+  "name": "@bugout/ability",
+  "version": "0.0.1",
+  "description": "Ethereum ABI fixer and validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bugout-dev/ability.git"
+  },
+  "keywords": [
+    "evm",
+    "ethereum",
+    "solidity",
+    "web3",
+    "abi"
+  ],
+  "author": "Moonstream Engineering (engineering@moonstream.to)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bugout-dev/ability/issues"
+  },
+  "homepage": "https://github.com/bugout-dev/ability#readme",
+  "dependencies": {
+    "web3": "^1.7.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
+}
