@@ -14,8 +14,19 @@ function deduplicate(abi) {
         deduplicatedAbi.push(item);
       }
     } else {
-      const selector = web3.eth.abi.encodeFunctionSignature(item);
-      if (methodSelectors[selector] === undefined) {
+      let selector = null;
+      try {
+        selector = web3.eth.abi.encodeFunctionSignature(item);
+      } catch (e) {
+        console.error(
+          `Got error while trying to parse ABI item:\n${e}.\nABI item:\n${JSON.stringify(
+            item,
+            null,
+            2
+          )}`
+        );
+      }
+      if (selector && methodSelectors[selector] === undefined) {
         methodSelectors[selector] = item;
         deduplicatedAbi.push(item);
       }
